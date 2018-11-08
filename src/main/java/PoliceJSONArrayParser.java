@@ -1,9 +1,9 @@
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-public class PoliceJSONParser {
+public class PoliceJSONArrayParser {
     JSONArray policeData;
 
-    public PoliceJSONParser(String request) {
+    public PoliceJSONArrayParser(String request) {
         HTTPGetManager httpGetManager = new HTTPGetManager();
         JSONFactory jsonFactory = new JSONFactory();
         httpGetManager.acquirePoliceData(request);
