@@ -3,17 +3,34 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 public class JSONFactory {
-    private JSONArray policeJSON;
+    private JSONArray policeJSONArray;
+    private JSONObject policeJSONObject;
 
-    public JSONArray getPoliceJSON() {
-        return policeJSON;
-    }
-    public void convertPoliceDataToJSON(String JSONString) {
+    public void convertPoliceDataToJSONArray(String JSONString) {
         JSONParser jsonParser = new JSONParser();
         try {
-            this.policeJSON = (JSONArray) jsonParser.parse(JSONString);
+            this.policeJSONArray = (JSONArray) jsonParser.parse(JSONString);
         } catch (ParseException e) {
             e.printStackTrace();
         }
     }
+
+    public JSONArray getPoliceJSONArray() {
+        return policeJSONArray;
+    }
+
+    public void convertPoliceDataToJSONObject(String JSONString) {
+        JSONParser jsonParser = new JSONParser();
+        try {
+            this.policeJSONObject = (JSONObject) jsonParser.parse(JSONString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public JSONObject getPoliceJSONObject() {
+        return policeJSONObject;
+    }
+
+
 }

@@ -7,8 +7,8 @@ public class PoliceJSONParser {
         HTTPGetManager httpGetManager = new HTTPGetManager();
         JSONFactory jsonFactory = new JSONFactory();
         httpGetManager.acquirePoliceData(request);
-        jsonFactory.convertPoliceDataToJSON(httpGetManager.getPoliceData());
-        policeData = jsonFactory.getPoliceJSON();
+        jsonFactory.convertPoliceDataToJSONArray(httpGetManager.getPoliceData());
+        policeData = jsonFactory.getPoliceJSONArray();
     }
 
     public JSONArray getPoliceData(){
