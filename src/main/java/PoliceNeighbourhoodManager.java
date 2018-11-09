@@ -1,3 +1,4 @@
+import Utilities.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -31,12 +32,16 @@ public class PoliceNeighbourhoodManager {
     public void getSpecificIDData(String id){
         PoliceJSONObjectParser objectParser = new PoliceJSONObjectParser(requestNeighbourhood + "/" + id);
         specificIDData = objectParser.getPoliceData();
-        System.out.println(specificIDData);
     }
 
     public void getNeighbourhoodTeamData(String id){
         PoliceJSONArrayParser arrayParser = new PoliceJSONArrayParser(requestNeighbourhood + "/" + id + "/people");
-        System.out.println(arrayParser.getPoliceData());
     }
 
+    public void getNeighbourhoodPriorities(String id){
+        PoliceJSONArrayParser arrayParser = new PoliceJSONArrayParser(requestNeighbourhood + "/" + id + "/priorities");
+    }
+    public void getNeighbourhoodEvents(String id){
+        PoliceJSONArrayParser arrayParser = new PoliceJSONArrayParser(requestNeighbourhood + "/" + id + "/events");
+    }
 }
