@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class PoliceForcesManager {
 
-    JSONArray forceData;
-    ArrayList forceIDs = new ArrayList();
+    private JSONArray forceData;
+    private ArrayList forceIDs = new ArrayList();
 
     public PoliceForcesManager() {
         SetForceData();
@@ -42,6 +42,10 @@ public class PoliceForcesManager {
             JSONObject selectedData = (JSONObject) forceData.get(i);
             forceIDs.add(selectedData.get("id"));
         }
+    }
+
+    public ArrayList getForceIDs(){
+        return forceIDs;
     }
 
 
