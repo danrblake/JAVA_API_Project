@@ -6,6 +6,9 @@ public class PoliceNeighbourhoodManager {
 
     private ArrayList forceIDs;
     private JSONArray neighbourhoodInfo;
+    private ArrayList neighbourhoodIDs = new ArrayList();
+    private String requestNeighbourhood;
+    private JSONObject specificIDData;
 
     public PoliceNeighbourhoodManager(){
         PoliceForcesManager forcesManager = new PoliceForcesManager();
@@ -13,8 +16,21 @@ public class PoliceNeighbourhoodManager {
     }
 
     public void getSpecificNeighbourHoodData(String nameOfNeighbourhood) {
+        this.requestNeighbourhood = nameOfNeighbourhood;
         PoliceJSONArrayParser arrayParser = new PoliceJSONArrayParser(nameOfNeighbourhood+"/neighbourhoods");
         neighbourhoodInfo = arrayParser.getPoliceData();
-        System.out.println(neighbourhoodInfo);
+        for (int i = 0; i < neighbourhoodInfo.size(); i++) {
+            JSONObject selectedData = (JSONObject) neighbourhoodInfo.get(i);
+            neighbourhoodIDs.add(selectedData.get("id"));
+        }
+    }
+    public ArrayList getNeighbourhoodIDs(){
+        return neighbourhoodIDs;
+    }
+
+    public void getSpecificIDData(String id){
+        PoliceJSONObjectParser objectParser = new PoliceJSONObjectParser(requestNeighbourhood + "/" + id);
+        specificIDData = objectParser.getPoliceData();
+        System.out.println(specificIDData);
     }
 }
