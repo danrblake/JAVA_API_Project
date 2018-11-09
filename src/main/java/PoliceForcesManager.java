@@ -1,3 +1,5 @@
+import Utilities.PoliceJSONArrayParser;
+import Utilities.PoliceJSONObjectParser;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -5,8 +7,8 @@ import java.util.ArrayList;
 
 public class PoliceForcesManager {
 
-    JSONArray forceData;
-    ArrayList forceIDs = new ArrayList();
+    private JSONArray forceData;
+    private ArrayList forceIDs = new ArrayList();
 
     public PoliceForcesManager() {
         SetForceData();

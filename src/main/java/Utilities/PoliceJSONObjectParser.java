@@ -1,8 +1,11 @@
-import org.json.simple.JSONArray;
+package Utilities;
+
+import Utilities.JSONFactory;
 import org.json.simple.JSONObject;
 
 public class PoliceJSONObjectParser {
-    JSONObject policeData;
+
+    private JSONObject policeData;
 
     public PoliceJSONObjectParser(String request) {
         HTTPGetManager httpGetManager = new HTTPGetManager();
