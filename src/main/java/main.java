@@ -4,6 +4,7 @@ public class main {
         policeNeighbourhoodManager.getSpecificNeighbourHoodData("leicestershire");
         policeNeighbourhoodManager.getNeighbourhoodIDs();
         policeNeighbourhoodManager.getSpecificIDData("NC04");
+        policeNeighbourhoodManager.getNeighbourhoodTeamData("NC04");
     }
 
 

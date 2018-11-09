@@ -33,4 +33,10 @@ public class PoliceNeighbourhoodManager {
         specificIDData = objectParser.getPoliceData();
         System.out.println(specificIDData);
     }
+
+    public void getNeighbourhoodTeamData(String id){
+        PoliceJSONArrayParser arrayParser = new PoliceJSONArrayParser(requestNeighbourhood + "/" + id + "/people");
+        System.out.println(arrayParser.getPoliceData());
+    }
+
 }
