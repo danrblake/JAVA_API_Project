@@ -1,5 +1,4 @@
-import Utilities.PoliceJSONArrayParser;
-import Utilities.PoliceJSONObjectParser;
+import Utilities.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -44,6 +43,10 @@ public class PoliceForcesManager {
             JSONObject selectedData = (JSONObject) forceData.get(i);
             forceIDs.add(selectedData.get("id"));
         }
+    }
+
+    public ArrayList getForceIDs(){
+        return forceIDs;
     }
 
 
