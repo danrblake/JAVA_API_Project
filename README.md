@@ -8,7 +8,7 @@ into a readable format.
 In order to use/test this project you will need to specify your requested actions via the main method (currently empty). The project works 
 by using the PoliceJSONParser as the object that creates a call to the Police API and then stores the data retrieved. From this original
 data you can navigate the other endpoints to achieve information based on specific areas, specific case ID's and more (read Police API docs#
-[https://data.police.uk/docs/](here)
+[here](https://data.police.uk/docs/)
 
 ## Authors
 Daniel Blake, Jason Blee, Boris Zekic
